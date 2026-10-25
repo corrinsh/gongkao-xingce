@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>行测真题库 · 广东考生版</title>
+<meta name="description" content="2016—2026 国考 + 广东省考行测真题，按考点刷题、整卷模考、错题本与弱项诊断。本地运行，记录只存在你自己的浏览器里。" />
+<meta name="theme-color" content="#efeee8" />
+<meta property="og:title" content="行测真题库 · 广东考生版" />
+<meta property="og:description" content="59 套 / 6,592 题：国考 + 广东省考 + 广州/深圳，按考点刷题、整卷模考、弱项诊断。" />
+<meta property="og:type" content="website" />
+<link rel="stylesheet" href="assets/app.css" />
+</head>
+<body>
+<div class="shell">
+  <aside class="rail" id="rail">
+    <div class="brand">
+      <span class="brand-mark">行</span>
+      <span class="brand-text">
+        <b>行测真题库</b>
+        <i>2016—2026 · 58,890 题</i>
+      </span>
+    </div>
+
+    <button class="region-pill" id="region-toggle" title="切换考区筛选（影响抽题范围与试卷列表）">
+      <span class="rp-dot"></span><span id="region-label">考区 · 广东考生</span>
+    </button>
+
+    <nav class="nav" id="nav">
+      <button class="nav-item" data-view="home" data-short="今日"><span class="nav-ico">◱</span><span class="nav-label">今日</span></button>
+      <button class="nav-item" data-view="drill" data-short="专项"><span class="nav-ico">◈</span><span class="nav-label">专项练习</span></button>
+      <button class="nav-item" data-view="papers" data-short="套卷"><span class="nav-ico">▤</span><span class="nav-label">套卷模考</span></button>
+      <button class="nav-item" data-view="wrong" data-short="错题"><span class="nav-ico">✗</span><span class="nav-label">错题本</span><span class="badge" id="badge-wrong">0</span></button>
+      <button class="nav-item" data-view="diag" data-short="诊断"><span class="nav-ico">◑</span><span class="nav-label">诊断</span></button>
+      <button class="nav-item" data-view="cards" data-short="速查"><span class="nav-ico">◇</span><span class="nav-label">考点速查</span></button>
+      <button class="nav-item" data-view="search" data-short="搜题"><span class="nav-ico">⌕</span><span class="nav-label">搜题</span></button>
+    </nav>
+
+    <div class="rail-modules" id="rail-modules"></div>
+
+    <div class="rail-foot">
+      <div class="mini-stat"><span>累计已做</span><b id="foot-done">0</b></div>
+      <div class="mini-stat"><span>正确率</span><b id="foot-acc">—</b></div>
+    </div>
+    <div class="rail-actions">
+      <button data-font-cycle title="切换题目字号">字号 <span id="font-label">中</span></button>
+      <button data-about>关于</button>
+    </div>
+  </aside>
+
+  <main class="main" id="main"></main>
+
+  <aside class="side side-left" id="side-left"></aside>
+
+  <aside class="sheet" id="sheet">
+    <div class="sheet-head">
+      <span>答题卡</span>
+      <button class="sheet-close" id="sheet-close" aria-label="收起答题卡">×</button>
+    </div>
+    <div class="sheet-meta" id="sheet-meta"></div>
+    <div class="sheet-grid" id="sheet-grid"></div>
+    <button class="sheet-jump" id="sheet-jump">跳到第一个未答</button>
+    <div class="sheet-legend">
+      <span><i class="lg lg-ok"></i>正确</span>
+      <span><i class="lg lg-no"></i>错误</span>
+      <span><i class="lg lg-cur"></i>当前</span>
+    </div>
+  </aside>
+
+  <aside class="side side-right" id="side-right"></aside>
+</div>
+
+<div class="modal" id="modal" hidden>
+  <div class="modal-box" id="modal-box"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
