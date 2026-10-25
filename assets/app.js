@@ -436,7 +436,9 @@ function viewHome() {
   return `<div class="wrap">
     <div class="eyebrow">${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, '0')}.${String(d.getDate()).padStart(2, '0')} · 个人复习台</div>
     <h1 class="page">今天从哪一道开始？</h1>
-    <p class="sub">库里是 2016—2026 年国考、省考、联考行测真题 ${num(scopeTotal)} 道，按六大模块归档，题目带官方解析。选一条路径开始，做错的题会自动进错题本。</p>
+    <p class="sub">${isScopeOnly()
+      ? `库里是 2016—2026 年国考 + 广东省考（含广州/深圳）行测真题 ${num(scopeTotal)} 道，按六大模块归档，题目带官方解析。选一条路径开始，做错的题会自动进错题本。`
+      : `库里是 2016—2026 年国考、省考、联考行测真题 ${num(scopeTotal)} 道，按六大模块归档，题目带官方解析。选一条路径开始，做错的题会自动进错题本。`}</p>
 
     ${(S.stats.done === 0 && !S.guideOff) ? `<div class="guide">
       <div class="guide-head"><b>第一次来？三步上手</b><button data-guide-off>不再显示</button></div>
